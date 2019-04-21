@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     @IBAction func plus() {
         
-        number = number + 2
+        number = number + 3
         label.text = String(number)
     }
     
