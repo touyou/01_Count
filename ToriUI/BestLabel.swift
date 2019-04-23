@@ -39,7 +39,7 @@ public class BestLabel: UIView {
 
         let nib = UINib(nibName: "BestLabel", bundle: Bundle(for: BestLabel.self))
         let contentView = nib.instantiate(withOwner: self, options: nil).first as! UIView
-        contentView.frame = frame
+        contentView.frame = bounds
         addSubview(contentView)
     }
 }
