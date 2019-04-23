@@ -13,6 +13,12 @@
 		46F00E5F226E8398005B00E7 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F00E5E226E8398005B00E7 /* RoundedButton.swift */; };
 		46F00E61226E86A3005B00E7 /* Jost-500-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46F00E60226E86A3005B00E7 /* Jost-500-Medium.ttf */; };
 		46F00E62226E86A3005B00E7 /* Jost-500-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46F00E60226E86A3005B00E7 /* Jost-500-Medium.ttf */; };
+		46F00E64226E88F2005B00E7 /* CountLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F00E63226E88F2005B00E7 /* CountLabel.swift */; };
+		46F00E65226E88F2005B00E7 /* CountLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F00E63226E88F2005B00E7 /* CountLabel.swift */; };
+		46F00E67226E89BE005B00E7 /* BestLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F00E66226E89BE005B00E7 /* BestLabel.swift */; };
+		46F00E68226E89BE005B00E7 /* BestLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F00E66226E89BE005B00E7 /* BestLabel.swift */; };
+		46F00E6A226E89CB005B00E7 /* BestLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46F00E69226E89CB005B00E7 /* BestLabel.xib */; };
+		46F00E6B226E89CB005B00E7 /* BestLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46F00E69226E89CB005B00E7 /* BestLabel.xib */; };
 		E2C270621EAFFBA800B3FE62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C270611EAFFBA800B3FE62 /* AppDelegate.swift */; };
 		E2C270641EAFFBA800B3FE62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C270631EAFFBA800B3FE62 /* ViewController.swift */; };
 		E2C270671EAFFBA800B3FE62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C270651EAFFBA800B3FE62 /* Main.storyboard */; };
@@ -50,6 +56,9 @@
 		46F00E54226E8380005B00E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46F00E5E226E8398005B00E7 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		46F00E60226E86A3005B00E7 /* Jost-500-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-500-Medium.ttf"; sourceTree = "<group>"; };
+		46F00E63226E88F2005B00E7 /* CountLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountLabel.swift; sourceTree = "<group>"; };
+		46F00E66226E89BE005B00E7 /* BestLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestLabel.swift; sourceTree = "<group>"; };
+		46F00E69226E89CB005B00E7 /* BestLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestLabel.xib; sourceTree = "<group>"; };
 		E2C2705E1EAFFBA800B3FE62 /* Count.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Count.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C270611EAFFBA800B3FE62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2C270631EAFFBA800B3FE62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +94,9 @@
 				46F00E53226E8380005B00E7 /* ToriUI.h */,
 				46F00E54226E8380005B00E7 /* Info.plist */,
 				46F00E5E226E8398005B00E7 /* RoundedButton.swift */,
+				46F00E63226E88F2005B00E7 /* CountLabel.swift */,
+				46F00E66226E89BE005B00E7 /* BestLabel.swift */,
+				46F00E69226E89CB005B00E7 /* BestLabel.xib */,
 			);
 			path = ToriUI;
 			sourceTree = "<group>";
@@ -217,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46F00E6B226E89CB005B00E7 /* BestLabel.xib in Resources */,
 				46F00E62226E86A3005B00E7 /* Jost-500-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +240,7 @@
 			files = (
 				E2C2706C1EAFFBA800B3FE62 /* LaunchScreen.storyboard in Resources */,
 				E2C270691EAFFBA800B3FE62 /* Assets.xcassets in Resources */,
+				46F00E6A226E89CB005B00E7 /* BestLabel.xib in Resources */,
 				E2C270671EAFFBA800B3FE62 /* Main.storyboard in Resources */,
 				46F00E61226E86A3005B00E7 /* Jost-500-Medium.ttf in Resources */,
 			);
@@ -239,6 +253,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46F00E65226E88F2005B00E7 /* CountLabel.swift in Sources */,
+				46F00E68226E89BE005B00E7 /* BestLabel.swift in Sources */,
 				46F00E5F226E8398005B00E7 /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46F00E67226E89BE005B00E7 /* BestLabel.swift in Sources */,
+				46F00E64226E88F2005B00E7 /* CountLabel.swift in Sources */,
 				E2C270641EAFFBA800B3FE62 /* ViewController.swift in Sources */,
 				E2C270621EAFFBA800B3FE62 /* AppDelegate.swift in Sources */,
 			);

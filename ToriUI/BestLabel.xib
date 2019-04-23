@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Jost-500-Medium.ttf">
+            <string>Jost-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BestLabel" customModule="Count" customModuleProvider="target">
+            <connections>
+                <outlet property="numberLabel" destination="aFQ-X5-w53" id="M7s-xs-y0g"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="165" height="103"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="iuD-jK-NB2">
+                    <rect key="frame" x="0.0" y="0.0" width="165" height="103"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfD-CL-jwR">
+                    <rect key="frame" x="59.5" y="16" width="46" height="28"/>
+                    <fontDescription key="fontDescription" name="Jost-Medium" family="Jost*" pointSize="20"/>
+                    <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sec" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtk-ZS-BKH">
+                    <rect key="frame" x="120" y="64.5" width="29" height="28"/>
+                    <fontDescription key="fontDescription" name="Jost-Medium" family="Jost*" pointSize="20"/>
+                    <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFQ-X5-w53">
+                    <rect key="frame" x="43" y="44" width="69" height="55.5"/>
+                    <fontDescription key="fontDescription" name="Jost-Medium" family="Jost*" pointSize="40"/>
+                    <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="iuD-jK-NB2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2Kr-KE-GRV"/>
+                <constraint firstAttribute="bottom" secondItem="iuD-jK-NB2" secondAttribute="bottom" id="4Jh-uT-nbV"/>
+                <constraint firstItem="aFQ-X5-w53" firstAttribute="firstBaseline" secondItem="jtk-ZS-BKH" secondAttribute="firstBaseline" id="BQF-eP-4UA"/>
+                <constraint firstItem="NfD-CL-jwR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IdA-yj-eUU"/>
+                <constraint firstItem="aFQ-X5-w53" firstAttribute="top" secondItem="NfD-CL-jwR" secondAttribute="bottom" id="K4B-2a-Ucu"/>
+                <constraint firstItem="NfD-CL-jwR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="QMs-Sv-tZ1"/>
+                <constraint firstItem="iuD-jK-NB2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="R7R-yh-b0n"/>
+                <constraint firstItem="jtk-ZS-BKH" firstAttribute="leading" secondItem="aFQ-X5-w53" secondAttribute="trailing" constant="8" id="Wg4-6D-nLS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jtk-ZS-BKH" secondAttribute="trailing" constant="16" id="aQY-6g-ods"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jtk-ZS-BKH" secondAttribute="bottom" constant="8" id="rON-AK-0Ig"/>
+                <constraint firstItem="iuD-jK-NB2" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="xIl-Kx-VPO"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-135.50724637681159" y="-232.03125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cloud" width="55" height="34.5"/>
+    </resources>
+</document>
