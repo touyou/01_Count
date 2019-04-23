@@ -10,47 +10,66 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var number: Int = 0
     @IBOutlet var label: UILabel!
-
+    @IBOutlet var bestView: BestLabel!
+    private var timer: Timer?
+    private var timerTotalDuration: TimeInterval = 0
+    let saveData = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        saveData.register(defaults: ["highestScore":0.0])
+        bestView.text = String(format: "%.2f", saveData.double(forKey: "highestScore"))
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func plus() {
-        
-        number = number + 3
-        label.text = String(number)
+    @IBAction func tappedStartButton(){
+        startTimer()
     }
     
-    /* Check.1 マイナス機能 */
-    @IBAction func minus() {
-        
-        number = number - 1
-        label.text = String(number)
+    @IBAction func tappedStopButton(){
+        stopTimer()
     }
     
-    /* Check.2 かける・割る機能 */
-    @IBAction func times() {
-        
-        number = number * 2
-        label.text = String(number)
+    @IBAction func tappedResetButton(){
+        stopTimer()
+        if saveData.double(forKey: "highestScore") < timerTotalDuration {
+            saveData.set(timerTotalDuration, forKey:"highestScore")
+            bestView.text = String(format: "%.2f", saveData.double(forKey: "highestScore"))
+        }
+        resetTimer()
+        label.text = "0.00"
     }
-
-    @IBAction func divide() {
-        
-        number = number / 2
-        label.text = String(number)
+    
+    func startTimer() {
+        if timer != nil { return }
+        timer = Timer.scheduledTimer(
+            timeInterval: 0.01,
+            target: self,
+            selector: #selector(handleTimer(_:)),
+            userInfo: nil,
+            repeats: true
+        )
     }
-
     
+    func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
     
-
+    func resetTimer() {
+        stopTimer()
+        timerTotalDuration = 0
+    }
+    
+    @objc private func handleTimer(_ timer: Timer) {
+        timerTotalDuration += timer.timeInterval
+        label.text = String(format: "%.2f", timerTotalDuration)
+    }
+    
 }
 
