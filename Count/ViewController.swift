@@ -14,12 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet var bestView: BestLabel!
     private var timer: Timer?
     private var timerTotalDuration: TimeInterval = 0
-    var db = UserDefaults.standard
+    let saveData = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        db.register(defaults: ["highestScore":0.0])
-        bestView.text = String(format: "%.2f",db.double(forKey: "highestScore"))
+        saveData.register(defaults: ["highestScore":0.0])
+        bestView.text = String(format: "%.2f", saveData.double(forKey: "highestScore"))
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,25 +27,26 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func startBtn(){
+    @IBAction func tappedStartButton(){
         startTimer()
     }
     
-    @IBAction func stopBtn(){
+    @IBAction func tappedStopButton(){
         stopTimer()
     }
     
-    @IBAction func resetBtn(){
-        if db.double(forKey: "highestScore") < timerTotalDuration {
-            db.set(timerTotalDuration,forKey:"highestScore")
+    @IBAction func tappedResetButton(){
+        stopTimer()
+        if saveData.double(forKey: "highestScore") < timerTotalDuration {
+            saveData.set(timerTotalDuration, forKey:"highestScore")
+            bestView.text = String(format: "%.2f", saveData.double(forKey: "highestScore"))
         }
         resetTimer()
         label.text = "0.00"
-        bestView.text = String(format: "%.2f",db.double(forKey: "highestScore"))
     }
     
     func startTimer() {
-        guard timer == nil else { return }
+        if timer != nil { return }
         timer = Timer.scheduledTimer(
             timeInterval: 0.01,
             target: self,
@@ -67,7 +68,7 @@ class ViewController: UIViewController {
     
     @objc private func handleTimer(_ timer: Timer) {
         timerTotalDuration += timer.timeInterval
-        label.text = String(format: "%.2f",timerTotalDuration)
+        label.text = String(format: "%.2f", timerTotalDuration)
     }
     
 }

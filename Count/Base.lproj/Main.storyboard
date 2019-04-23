@@ -34,7 +34,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="resetBtn" destination="BYZ-38-t0r" eventType="touchDown" id="ZAW-NU-fuT"/>
+                                    <action selector="tappedResetButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="O6v-wb-jVf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ro-sH-d16" customClass="RoundedButton" customModule="ToriUI">
@@ -46,7 +46,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="stopBtn" destination="BYZ-38-t0r" eventType="touchDown" id="FDT-f5-3Qk"/>
+                                    <action selector="tappedStopButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="AAP-J2-CCD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnv-lL-STP" customClass="RoundedButton" customModule="ToriUI">
@@ -58,7 +58,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="startBtn" destination="BYZ-38-t0r" eventType="touchDown" id="3lt-yb-hM6"/>
+                                    <action selector="tappedStartButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="y2F-kk-9iR"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fn1-5M-tnO" customClass="BestLabel" customModule="Count" customModuleProvider="target">
