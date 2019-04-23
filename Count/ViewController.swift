@@ -10,21 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var label: UILabel!
-    @IBOutlet var bestView: BestLabel!
+    @IBOutlet var countLabel: CountLabel!
+    @IBOutlet var bestLabel: BestLabel!
     private var timer: Timer?
     private var timerTotalDuration: TimeInterval = 0
     let saveData = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        saveData.register(defaults: ["highestScore":0.0])
-        bestView.text = String(format: "%.2f", saveData.double(forKey: "highestScore"))
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        saveData.register(defaults: ["highestScore": 0.0])
+        bestLabel.text = String(format: "%.2f", saveData.double(forKey: "highestScore"))
     }
     
     @IBAction func tappedStartButton(){
@@ -38,11 +33,11 @@ class ViewController: UIViewController {
     @IBAction func tappedResetButton(){
         stopTimer()
         if saveData.double(forKey: "highestScore") < timerTotalDuration {
-            saveData.set(timerTotalDuration, forKey:"highestScore")
-            bestView.text = String(format: "%.2f", saveData.double(forKey: "highestScore"))
+            saveData.set(timerTotalDuration, forKey: "highestScore")
+            bestLabel.text = String(format: "%.2f", saveData.double(forKey: "highestScore"))
         }
         resetTimer()
-        label.text = "0.00"
+        countLabel.text = "0.00"
     }
     
     func startTimer() {
@@ -68,7 +63,7 @@ class ViewController: UIViewController {
     
     @objc private func handleTimer(_ timer: Timer) {
         timerTotalDuration += timer.timeInterval
-        label.text = String(format: "%.2f", timerTotalDuration)
+        countLabel.text = String(format: "%.2f", timerTotalDuration)
     }
     
 }

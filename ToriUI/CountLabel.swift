@@ -35,5 +35,6 @@ public class CountLabel: UILabel {
 
     private func configure() {
         font = UIFont(name: "Jost*", size: 42)
+        textColor = #colorLiteral(red: 0.5141925812, green: 0.5142051578, blue: 0.5141984224, alpha: 1)
     }
 }
